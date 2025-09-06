@@ -1,20 +1,22 @@
-import { FlatList, Text, TouchableOpacity, View } from 'react-native';
-import SensorElement from '@/components/SensorElement';
-
-const DATA = [{ name: 'Accelerometer' }] as const;
+import { Image, Text, View } from 'react-native';
 
 export default function Index() {
   return (
     <View
       style={{
         padding: 18,
+        gap: 24,
+        justifyContent: `center`,
+        alignItems: `center`,
         flex: 1,
       }}
     >
-      <FlatList
-        data={DATA}
-        renderItem={({ item }) => <SensorElement name={item.name} />}
-      ></FlatList>
+      <Image
+        source={require('../assets/images/react-logo.png')}
+        style={{ width: 100, height: 100 }}
+      />
+
+      <Text>Welcome to Expo Basic.. your favourite starting point</Text>
     </View>
   );
 }
